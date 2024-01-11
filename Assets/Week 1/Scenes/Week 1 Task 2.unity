@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 77645416}
   - component: {fileID: 77645417}
   m_Layer: 0
-  m_Name: tanks_tankDesert_body1
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,6 +207,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &415672109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415672110}
+  m_Layer: 0
+  m_Name: spawn point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &415672110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415672109}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.36, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 819756963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &819756962
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +249,7 @@ GameObject:
   - component: {fileID: 819756963}
   - component: {fileID: 819756964}
   m_Layer: 0
-  m_Name: tanks_turret1
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +267,8 @@ Transform:
   m_LocalPosition: {x: 0.41, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 415672110}
   m_Father: {fileID: 1490449473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &819756964
@@ -302,7 +334,7 @@ GameObject:
   - component: {fileID: 829458249}
   - component: {fileID: 829458250}
   m_Layer: 0
-  m_Name: tanks_tankTracks1
+  m_Name: Tracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,6 +436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346fce55eebfe3f4c93293eb08faf9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 579336229162881894, guid: 9c449979886841d43bc5e7e5a408c290, type: 3}
+  barrel: {fileID: 415672110}
 --- !u!4 &1490449473
 Transform:
   m_ObjectHideFlags: 0
