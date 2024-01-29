@@ -7,7 +7,6 @@ public class Missile : MonoBehaviour
 { float speed = 5f;
     Vector2 direction = new Vector2(10, 0);
     Rigidbody2D rigidbody;
-    public GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {

@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class CannonRotator : MonoBehaviour
 {
-    float speed = 5f;
-    Vector2 direction = new Vector2(10, 0);
+    float speed = 10;
     Rigidbody2D rigidbody;
-    public GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +15,10 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float keyboardInput = Input.GetAxis("Vertical");
     }
     private void FixedUpdate()
     {
-        rigidbody.MovePosition(rigidbody.position + direction * Time.deltaTime);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
+        rigidbody.AddTorque(speed * Time.deltaTime);
     }
 }
