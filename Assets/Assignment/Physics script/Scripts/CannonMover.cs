@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CannonMover : MonoBehaviour
 {
-    float speed = 2f; 
+    float speed = 2f;
+    public Transform barrel;
+    public GameObject prefab;
     // Start is called before the first frame update
     void Start()
     {
