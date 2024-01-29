@@ -10,7 +10,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -23,5 +23,5 @@ public class Mover : MonoBehaviour
         {
             Instantiate(prefab, barrel.position, barrel.rotation);
         }
-    }
+    }  
 }

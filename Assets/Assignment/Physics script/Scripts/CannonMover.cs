@@ -18,7 +18,5 @@ public class CannonMover : MonoBehaviour
     {
         float keyboardInput = Input.GetAxis("Horizontal"); // delcares keypresses to move left and right
         transform.Translate(keyboardInput * speed * Time.deltaTime, 0, 0);
-    }
-
-   
+    }  
 }
